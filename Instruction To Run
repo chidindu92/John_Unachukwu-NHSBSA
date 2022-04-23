@@ -1,0 +1,4 @@
+To run this project, open the project, ensure you have chrome and firefox browsers installed in your machine.
+
+Open the folder 'John_Unachukwu-NHSBSA', while in the folder, open a command prompt (Git-bash or Terminal or CMD)
+and then type : 'mvn clean install' or 'mvn test' in the command line without the quotation marks. make sure the path it is pointing is correct. 
