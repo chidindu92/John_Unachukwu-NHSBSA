@@ -1,20 +1,17 @@
 package steps;
 
-import hooks.Base;
 import hooks.Startup;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.hc.core5.util.Asserts;
-import org.openqa.selenium.By;
 import pages.*;
 
 import java.util.List;
 
 
-public class CheckerToolSteps extends Base {
+public class CheckerToolSteps {
 
     @Given("I am accessing the CheckerTool from <Browser Type>")
     public void iAmAccessingTheCheckerToolFromBrowserType(DataTable dataTable) {
@@ -149,14 +146,13 @@ public class CheckerToolSteps extends Base {
     @Then("I should be able to see if I can get the <Treatment> I need")
     public void i_should_be_able_to_see_if_i_can_get_the_treatment_i_need(io.cucumber.datatable.DataTable dataTable) {
         OutcomePage outcomePage = new OutcomePage();
+
         List<List<String>> collection = dataTable.asLists(String.class);
 
         collection.forEach(data -> {
 
             String getHelp = data.get(0);
-            if (outcomePage.ResultContent().contains(getHelp))
-                Asserts.check(true, getHelp);
-
+            outcomePage.ResultContent(getHelp);
         });
     }
 

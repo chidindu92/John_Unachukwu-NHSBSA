@@ -1,4 +1,16 @@
-To run this project, open the project, ensure you have chrome and firefox browsers installed in your machine.
+Run Instruction
+==========================
+To run this project, open the project, ensure you have chrome and firefox browsers
+installed in your machine.
 
-Open the folder 'John_Unachukwu-NHSBSA', while in the folder, open a command prompt (Git-bash or Terminal or CMD)
-and then type : 'mvn clean install' or 'mvn test' in the command line without the quotation marks. make sure the path it is pointing is correct. 
+Open the folder 'John_Unachukwu-NHSBSA', while in the folder, open a command prompt
+(Git-bash or Terminal or CMD) and then type : 'mvn clean install'
+or 'mvn test' in the command line without the quotation marks.
+Make sure the path it is pointing is correct.
+
+Note:
+Having gone through the acceptance criteria for test coverage,
+it seem that a user from Wales will be granted help with NHS cost.
+However, I’m not able to use the current build to generate a scenario
+where the user from Wales will NOT be granted free help with NHS cost.
+This means that the scenario created is based on the build given for testing.
